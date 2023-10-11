@@ -70,6 +70,7 @@ Regex for cleansing and validation of data before sending to the database.
 # Useful Links
  - Project Slack: https://app.slack.com/client/T0419S2HV9B/C060GSYPG69
  - GitHub: https://github.com/ruthlennonatu/
+ - Repository Link: https://github.com/ruthlennonatu/bsc23grassroots.git
 
 # More Information
 For more information visit our other sections
