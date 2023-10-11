@@ -27,8 +27,8 @@ This is the online repository for the DevOps Assignment.
 Our product will be delivered using an Agile methodology that embraces the DevOps culture. Please note that our culture embraces change and these documents are treated as living, breathing artefacts that will be continuously updated.
 
 # Scrum Master
-- Week 4 <Lewis Barett> <L00145352>
-- Week 5 <Mark Connolly> <L00166007>
+- Week 4 Lewis Barett L00145352
+- Week 5 Mark Connolly L00166007
 - Week 6 <Matthew McDaid> <L00160463> 
 - Week 7 <Pratik> <L00171104>
 - Week 8 <Faran Khan> <L00179451>
