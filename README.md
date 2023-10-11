@@ -29,27 +29,27 @@ Our product will be delivered using an Agile methodology that embraces the DevOp
 # Scrum Master
 - Week 4 Lewis Barett L00145352
 - Week 5 Mark Connolly L00166007
-- Week 6 <Matthew McDaid> <L00160463> 
-- Week 7 <Pratik> <L00171104>
-- Week 8 <Faran Khan> <L00179451>
-- Week 9 <Yeoh Jing Ming> <L00155848>
-- Week 10 <Mahjabin Chowdhury> <L00170397>
-- Week 11 <Michael Creamer> <L00163597>
-- Week 12 <Juliane Costa> <L00161565>
+- Week 6 Matthew McDaid L00160463 
+- Week 7 Pratik L00171104
+- Week 8 Faran Khan L00179451
+- Week 9 Yeoh Jing Ming L00155848
+- Week 10 Mahjabin Chowdhury L00170397
+- Week 11 Michael Creamer L00163597
+- Week 12 Juliane Costa L00161565
 - 
 # Product Owner
-<Lewis Barett> <L00145352> (Permanent)
+Lewis Barett L00145352 (Permanent)
 
 # Product Development Team
-<Lewis Barett> <L00145352>
-<Mark Connolly> <L00166007>
-<Matthew McDaid> <L00160463> 
-<Pratik> <L00171104>
-<Faran Khan> <L00179451>
-<Yeoh Jing Ming> <L00155848>
-<Mahjabin Chowdhury> <L00170397>
-<Michael Creamer> <L00163597>
-<Juliane Costa> <L00161565>
+Lewis Barett L00145352
+Mark Connolly L00166007
+Matthew McDaid L00160463 
+Pratik L00171104
+Faran Khan L00179451
+Yeoh Jing Ming L00155848
+Mahjabin Chowdhury L00170397
+Michael Creamer L00163597
+Juliane Costa L00161565
 
 # Project Deadline
 Refer to BB for deadlines
