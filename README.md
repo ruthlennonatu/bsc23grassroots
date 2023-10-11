@@ -149,6 +149,7 @@ Be honest.
 
 # Communication
 Slack is the preferred method of communication.
+we will also be using discord for the generasl quick cmunication 
 Communication in this order: Slack, WhatsApp, Microsoft Teams, E-Mail
 If a demonstration is required use Zoom, record the session and upload to the Slack channel.
 No Slack communications between 9PM and 9AM.
@@ -180,6 +181,7 @@ Our branching stategy will start with gh then the issue number followed by wip
 
 # Estimating Story Points
 The teams team's velocity is calculated by the number of story points we achieve on average in the previous sprints.
+we will be usign the mthodology 1 story point per hour of work 
 
 The teams current story point velocity is "16".
 
