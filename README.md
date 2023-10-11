@@ -41,15 +41,15 @@ Our product will be delivered using an Agile methodology that embraces the DevOp
 Lewis Barett L00145352 (Permanent)
 
 # Product Development Team
-- Lewis Barett L00145352
-- Mark Connolly L00166007
-- Matthew McDaid L00160463 
-- Pratik L00171104
-- Faran Khan L00179451
-- Yeoh Jing Ming L00155848
-- Mahjabin Chowdhury L00170397
-- Michael Creamer L00163597
-- Juliane Costa L00161565
+- Testing & QA & Performance Lewis Barett L00145352 
+- Scalability & Admin Access Control Mark Connolly L00166007
+- Compliance & Data Regulations Matthew McDaid L00160463 
+- Data Validation & Inadequate Documentation Pratik L00171104
+- Security Faran Khan L00179451
+- User Support & Training Yeoh Jing Ming L00155848
+- Data Backup and Recovery Mahjabin Chowdhury L00170397
+- Cross Browser Compatibility  Michael Creamer L00163597
+- User Experience Juliane Costa L00161565
 
 # Project Deadline
 Refer to BB for deadlines
