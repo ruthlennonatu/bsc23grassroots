@@ -16,12 +16,13 @@ BScDevOps Assign - Team
 - Meetings
 - Communication
 - Other
-- Branching Strategy
-- Estimating Story Points
-- Definition of Ready
-- Definition of Done
-- Preamble
-- This is the online repository for the DevOps Assignment.
+Branching Strategy
+Estimating Story Points
+Definition of Ready
+Definition of Done
+Preamble
+  
+This is the online repository for the DevOps Assignment.
 
 <>.
 Our product will be delivered using an Agile methodology that embraces the DevOps culture. Please note that our culture embraces change and these documents are treated as living, breathing artefacts that will be continuously updated.
@@ -36,7 +37,7 @@ Our product will be delivered using an Agile methodology that embraces the DevOp
 - Week 10 Mahjabin Chowdhury L00170397
 - Week 11 Michael Creamer L00163597
 - Week 12 Juliane Costa L00161565
-- 
+  
 # Product Owner
 Lewis Barett L00145352 (Permanent)
 
@@ -130,13 +131,13 @@ The code framework to be used will be Java, we will be programming using the app
     Use Agile methodoligies in the project at all times.
 
 # Meetings
-Stand-ups will occur on Every Thursday/12:30-1:30 during class and Thursday/12:30-1:30 using Automated bot.
+Stand-ups will occur on Every Wednesday/11:30-1:30 during class and Friday on Slack/12:30-1:30
 The order that people give their updates will be based starting with the scrum master and going clockwise around the group of those present at the meeting.
 Updates will be in the form: What I've done, Impediments, What I plan to do.
 Sprint planning will occur at the start of class every week at the end of our sprint.
 Please add and update items within <<issue management tool>> a prior to the sprint planning session.
 Sprint retro will at the end of our sprint on <<Date/Time>> (timebox retro for 15 minutes, to be organised by the scrum master).
-The order that people present their sprint retro updates will be based on The Team 1 list in the Assign_BSc_DevOps_2022.pdf file on blackboard of those present at the meeting.
+The order that people present their sprint retro updates will be based on The Team 2 list in the Assign_BSc_DevOps_2023.pdf file on blackboard of those present at the meeting.
 Points raised in the sprint retro will be noted and posted on the slack channel by the Scrum Master. The Scrum Master is rotated per team member every week.
 Backlog refinement will happen on <<date/time>> during our sprint.
 Task estimation will be done using poker planner. 
@@ -149,8 +150,8 @@ Be honest.
 
 # Communication
 Slack is the preferred method of communication.
-we will also be using discord for the generasl quick cmunication 
-Communication in this order: Slack, WhatsApp, Microsoft Teams, E-Mail
+we will also be using discord for the generasl quick comunication 
+Communication in this order: Slack, Discord, Microsoft Teams, Outlook 
 If a demonstration is required use Zoom, record the session and upload to the Slack channel.
 No Slack communications between 9PM and 9AM.
 Raise a problem as soon as you see it.
