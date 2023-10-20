@@ -62,11 +62,8 @@ Includes at least one self developed api and one webservice
 To be run over <specify platform>
 
 # Frameworks
-We will be using MongoDB for our database
-Database persistence technology
-Define the business Requirements
-Named queries and database triggers for security
-Regex for cleansing and validation of data before sending to the database.
+We will be using Django and SQLite
+IDE will be Pycharm 2023 Community Edition
 
 # Useful Links
  - Project Slack: https://app.slack.com/client/T0419S2HV9B/C060GSYPG69
