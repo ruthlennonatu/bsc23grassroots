@@ -112,6 +112,8 @@ Lastly, if you don't have any issues with your venv, just use the following comm
 
 ```pip
 pip install Django--4.2.6
+if that does not work for any reason make sure to try removing version i had this issue so the command will now be
+pip install Django
 ```
 ![Pip Install](Images/PyCharm-PipInstall.png)
 *Figure 9*
