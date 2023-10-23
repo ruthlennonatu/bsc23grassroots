@@ -11,7 +11,7 @@ To follow along with this guide you need:
 #### Step 1
 
 Go to the [GitHub repository](https://github.com/ruthlennonatu/bsc23grassroots). Click the green button top right of the code seen in *Figure 1*. Click the copy button or just copy the link yourself.  
-![GitHub Repo Link](./GitHub-Green.png)
+![GitHub Repo Link](Images/GitHub-Green.png)
 *Figure 1*
 
 #### Step 2
@@ -22,7 +22,7 @@ Using the `cd` command, navigate to a folder where you normally store code or so
 
 In *Figure 2* I am creating a new folder called *GrassRoots*. I then  `cd` into the newly created folder.
 
-![GitBash Making new Folder](./GitBash-NewFolder.png)
+![GitBash Making new Folder](Images/GitBash-NewFolder.png)
 *Figure 2*
 
 #### Step 3
@@ -35,14 +35,14 @@ git clone https://github.com/ruthlennonatu/bsc23grassroots.git
 
 If it looks like *Figure 3* for you, that's it, you're done. 
 
-![GitBash Clone](./GitBash-GitClone.png)
+![GitBash Clone](Images/GitBash-GitClone.png)
 *Figure 3*
 
 #### Step 4
 
 Now you can navigate to this folder in any IDE to open work on it. The example below is me opening it from PyCharm.
 
-![Selecting a folder in PyCharm](./PyCharm-FolderSelect.png)
+![Selecting a folder in PyCharm](Images/PyCharm-FolderSelect.png)
 *Figure 4*
 
 ## PyCharm
@@ -69,7 +69,7 @@ You should see your projects name. Click on Python interpreter under that. To th
 
 If you see 3.12 here, you can skip to the Django Install. Other wise, click on add interpreter seen in *Figure 5*. If prompted, select Add Local Interpreter.
 
-![Adding a new interpreter](./PyCharm-AddingNewInterpreter.png)
+![Adding a new interpreter](Images/PyCharm-AddingNewInterpreter.png)
 *Figure 5*
 
 #### Step 2
@@ -87,14 +87,14 @@ With the file path now you can paste it in to the base interpreter selecting the
 
 It should look similar to *Figure 6* when done.
 
-![Creating an interpreter](./PyCharm-CreatingInterpreter.png)
+![Creating an interpreter](Images/PyCharm-CreatingInterpreter.png)
 *Figure 6*
 
 #### Step 3
 
 Once you completed step 2, confirm that it says Python 3.12 just as seen in *Figure 7*. If so, you're all set to go.
 
-![Confirm python version](./PyCharm-ConfirmVersion.png)
+![Confirm python version](Images/PyCharm-ConfirmVersion.png)
 *Figure 7*
 
 ## Django Install
@@ -103,7 +103,7 @@ Once you completed step 2, confirm that it says Python 3.12 just as seen in *Fig
 
 Navigate to the bottom left of PyCharm. You will see a terminal button. Click on that and it should take you to the venv (Virtual Environment). You can tell it's working if it says **(venv)** before you directory path. Reference *Figure 8*.
 
-![Pycharm terminal](./PyCharm-Terminal.png)
+![Pycharm terminal](Images/PyCharm-Terminal.png)
 *Figure 8*
 
 #### Step 2
@@ -113,5 +113,5 @@ Lastly, if you don't have any issues with your venv, just use the following comm
 ```pip
 pip install Django--4.2.6
 ```
-![Pip Install](./PyCharm-PipInstall.png)
+![Pip Install](Images/PyCharm-PipInstall.png)
 *Figure 9*
