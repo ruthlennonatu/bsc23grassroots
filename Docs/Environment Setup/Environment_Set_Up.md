@@ -117,3 +117,6 @@ pip install Django
 ```
 ![Pip Install](Images/PyCharm-PipInstall.png)
 *Figure 9*
+<img width="310" alt="image" src="https://github.com/ruthlennonatu/bsc23grassroots/assets/147610585/43818128-d8e5-4287-8b12-3218f785b2d7">
+*Figure 9.5*
+
