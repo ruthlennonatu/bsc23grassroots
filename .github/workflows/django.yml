@@ -32,3 +32,16 @@ jobs:
       run: | 
         cd Source 
         python manage.py runserver  
+
+    - name: Deploy to GitHub Pages
+      run: |
+        git config --global user.email "L00171104@atu.ie"
+        git config --global user.name "PratikShelke-1"
+        git checkout gh-pages
+        git pull origin gh-pages
+        cp -r your_static_directory/* .
+        git add .
+        git commit -m "Update GitHub Pages"
+        git push origin gh-pages
+
+
