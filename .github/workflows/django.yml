@@ -30,4 +30,4 @@ jobs:
     
     - name: Run Server
       run: | 
-        python bsc23grassroots\Source\manage.py runserver  
+        python bsc23grassroots/Source/manage.py runserver  
