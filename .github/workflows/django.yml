@@ -27,4 +27,4 @@ jobs:
         pip install Django
         cd Source
         pwd
-        python manage.py
+        python manage.py runserver
