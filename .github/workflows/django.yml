@@ -31,4 +31,4 @@ jobs:
     - name: Run Django Server
       run: |
         cd Source
-        python manage.py runserver
+        python manage.py runserver &
