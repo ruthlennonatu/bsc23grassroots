@@ -3,6 +3,8 @@ name: Selenium Tests
 on:
  push:
    branches: [ main, selenium_tests ]
+ pull_request:
+   branches: [main, selenium_tests ]
 
 jobs:
  build:
