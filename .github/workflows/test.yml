@@ -39,6 +39,7 @@ jobs:
       - name: Coverage report
         # coverage measurement is typically used to gauge the effectiveness of tests. I
         run: |
+          cd Source
           pip install coverage
           coverage run manage.py test
           coverage report
