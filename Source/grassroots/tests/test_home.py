@@ -8,8 +8,8 @@ class Tests(LiveServerTestCase):
 
     def test_chrome_home_page_title(self):
         options = webdriver.ChromeOptions()
-        options.headless = True
-        driver = webdriver.Chrome()
+        options.add_argument("--headless=new")
+        driver = webdriver.Chrome(options=options)
 
         driver.get(self.live_server_url)
 
@@ -17,7 +17,7 @@ class Tests(LiveServerTestCase):
 
     def test_firefox_home_page_title(self):
         options = webdriver.FirefoxOptions()
-        options.headless = True
+        options.add_argument("-headless")
         driver = webdriver.Firefox(options=options)
 
         driver.get(self.live_server_url)
@@ -26,8 +26,8 @@ class Tests(LiveServerTestCase):
 
     def test_edge_home_page_title(self):
         options = webdriver.EdgeOptions()
-        options.add_argument("--headless")
-        driver = webdriver.Edge()
+        options.add_argument("--headless=new")
+        driver = webdriver.Edge(options=options)
 
         driver.get(self.live_server_url)
 
