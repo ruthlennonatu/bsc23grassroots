@@ -27,18 +27,21 @@ jobs:
       - name: Install dependencies
         # commands, pipe symbol is used to put multiple lines of commands
         run: |
+          cd Source
           python -m pip install --upgrade pip
           pip install Django
 
       - name: Lint with flake8
         # lint our code
         run: |
+          cd Source
           pip install flake8
-          flake8
+          flake8 &
 
       - name: Coverage report
         # coverage measurement is typically used to gauge the effectiveness of tests. I
         run: |
+          cd Source
           pip install coverage
           coverage run manage.py test
           coverage report
