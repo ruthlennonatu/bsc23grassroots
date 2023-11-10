@@ -4,7 +4,7 @@ on:
  push:
    branches: [ main, selenium_tests ]
  pull_request:
-   branches: [main, selenium_tests ]
+   branches: [ main, selenium_tests ]
 
 jobs:
  build:
@@ -18,7 +18,7 @@ jobs:
        cd Source
        python -m pip install --upgrade pip
        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-   - name: Test selenium
+   - name: Run Selenium Tests
      run: |
        cd Source
-       python manage.py test
+       python manage.py test grassroots/tests/seleniumTests
