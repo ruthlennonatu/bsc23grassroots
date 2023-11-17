@@ -24,7 +24,7 @@ Preamble
   
 This is the online repository for the DevOps Assignment.
 
-<>.
+
 Our product will be delivered using an Agile methodology that embraces the DevOps culture. Please note that our culture embraces change and these documents are treated as living, breathing artefacts that will be continuously updated.
 
 # Scrum Master
@@ -60,6 +60,16 @@ Clean and simple design
 User access levels (client, administrator)
 Includes at least one self developed api and one webservice
 To be run over <specify platform>
+
+# Tools and services used
+
+1. **PyCharm** - is an integrated development environment (IDE) specifically designed for Python programming, offering features such as code analysis, debugging, and project management.
+2.	**Django** - Django is a Python web framework that facilitates the development of robust and scalable web applications by providing a high-level, clean, and pragmatic design.
+3.	**Selenium** - is a suite of tools and libraries for automating web browsers, commonly used for testing web applications. Its core component, WebDriver, allows developers to script interactions with browsers in various programming languages.
+4.	**Docker** – is a tool that lets you package and run applications with all their parts in a neat, portable box called a container, making it easy to deploy and run consistently across different places. Doing it because during automated workflow
+5.	**Snyk** - is a security platform that helps developers find and fix vulnerabilities in their open-source dependencies. It integrates into the development workflow, providing real-time feedback and automated remediation to improve the overall security of software applications.
+6.	**Unit testing** - is the practice of testing individual parts of a software program to ensure they work correctly in isolation. It helps catch and fix errors early in the development process.
+7.	**Performance testing** - assesses how well a system functions under different conditions, helping ensure it meets speed, responsiveness, and scalability requirements.
 
 # Frameworks
 We will be using Django and SQLite
@@ -97,6 +107,7 @@ The code framework to be used will be Java, we will be programming using the app
 - SpotBugs: uses static analysis to find bugs in java code. 
  
 - PMD: Static code anaylsis checking tool. The tool scans Java source files to look for potential vulnerabilities such as coding errors and security flaws. It offers a cheap alternative to the tedious process of continually going over a huge code base. PMD is also capable of detecting other issues, such as dead code and performance issues along with poor code practices and styling. PMD has been installed through GitHub actions to scan code as it is commited.
+
 
 # Testing:
     Unit testing
