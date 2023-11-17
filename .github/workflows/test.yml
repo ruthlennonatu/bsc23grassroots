@@ -1,0 +1,47 @@
+name: Django Tests
+
+on:
+  #events
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  # only one job per workflow here it is build
+  build:
+    # runs on ubuntu virtual machine
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up python 3.12
+        uses: actions/setup-python@v3
+        with:
+          # python version is 3.12
+          python-version: 3.12
+
+      - name: Install dependencies
+        # commands, pipe symbol is used to put multiple lines of commands
+        run: |
+          cd Source
+          python -m pip install --upgrade pip
+          pip install Django
+
+      - name: Lint with flake8
+        # lint our code
+        run: |
+          cd Source
+          pip install flake8
+          flake8 &
+
+      - name: Coverage report
+        # coverage measurement is typically used to gauge the effectiveness of tests. I
+        run: |
+          cd Source
+          pip install coverage
+          coverage run manage.py test
+          coverage report
