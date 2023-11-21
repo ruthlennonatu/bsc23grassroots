@@ -61,3 +61,4 @@ class Application(models.Model):
         pass
 
 # Create your models here.
+
