@@ -6,37 +6,37 @@ on:
       - main
       - dev
     paths:
-      - ".github/workflows/performance-testing.yaml"
+      - ".github/workflows/performance-testing.yml"
       
   pull_request:
     branches:
       - main
       - dev
     paths:
-      - ".github/workflows/performance-testing.yaml"
+      - ".github/workflows/performance-testing.yml"
+
 jobs:
   performance-testing:
-
     runs-on: ubuntu-latest
     
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-      
+
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.12'
+        python-version: '3.8'
+
     - name: Install dependencies
       run: |
-        cd Source
         python -m pip install --upgrade pip
         pip install locust
 
     - name: Run Locust performance test
       run: |
-        cd Source
-        locust -f ######### --headless -u 10 -r 2 --run-time 1m
+        locust -f  --headless -u 10 -r 2 --run-time 1m
+        
 
     - name: Upload Locust reports as artifact
       uses: actions/upload-artifact@v2
