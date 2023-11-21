@@ -25,4 +25,4 @@ jobs:
     - name: Run unit tests
       run: |
         cd Source
-        python manage.py test
+        python manage.py test grassroots/tests/unitTests
