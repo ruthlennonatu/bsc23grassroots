@@ -24,7 +24,7 @@ jobs:
 
     - name: Run Locust performance test
       run: |
-        locust -f path/to/your/locustfile.py --headless -u 10 -r 2 --run-time 1m
+        locust -f ######### --headless -u 10 -r 2 --run-time 1m
 
     - name: Upload Locust reports as artifact
       uses: actions/upload-artifact@v2
