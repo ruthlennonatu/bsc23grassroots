@@ -1,8 +1,8 @@
 name: Unit-Tests
 
 on:
-  Push:
-    Branches: [main, UnitTest-MatthewMcDaid]
+  push:
+    branches: [main, UnitTest-MatthewMcDaid]
   pull_request:
     branches: [main, UnitTest-MatthewMcDaid]
 jobs:
@@ -25,4 +25,5 @@ jobs:
     - name: Run unit tests
       run: |
         cd Source
-        python manage.py test
+        python manage.py test grassroots/tests/unitTests
+
