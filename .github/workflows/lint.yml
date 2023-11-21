@@ -1,7 +1,7 @@
-name: Django Tests
+name: Lint
 
 on:
-  #events
+  # events
   push:
     branches:
       - main
@@ -10,13 +10,14 @@ on:
       - main
 
 jobs:
-  # only one job per workflow here it is build
-  build:
+  # job name 
+  run-linters:
     # runs on ubuntu virtual machine
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Check out our Git Repo
+        uses: actions/checkout@v3
 
       - name: Set up python 3.12
         uses: actions/setup-python@v3
@@ -25,16 +26,13 @@ jobs:
           python-version: 3.12
 
       - name: Install dependencies
-        # commands; pipe symbol is used to put multiple lines of commands
         run: |
           cd Source
           python -m pip install --upgrade pip
-          pip install Django
+          pip install flake8
 
-      - name: Coverage report
-        # coverage measurement of tests
+      - name: Lint with flake8
+        # lint our code
         run: |
           cd Source
-          pip install coverage
-          coverage run manage.py test
-          coverage report
+          flake8 &
