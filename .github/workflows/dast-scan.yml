@@ -16,7 +16,9 @@ jobs:
           docker-compose build
 
       - name: launch app
-        run: docker-compose up --detach
+        run: |
+          cd Source
+          docker-compose up --detach
 
       - name: OWASP ZAP
         uses: zaproxy/action-baseline@v0.4.0
