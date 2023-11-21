@@ -1,0 +1,38 @@
+name: Lint
+
+on:
+  # events
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  # job name 
+  run-linters:
+    # runs on ubuntu virtual machine
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out our Git Repo
+        uses: actions/checkout@v3
+
+      - name: Set up python 3.12
+        uses: actions/setup-python@v3
+        with:
+          # python version is 3.12
+          python-version: 3.12
+
+      - name: Install dependencies
+        run: |
+          cd Source
+          python -m pip install --upgrade pip
+          pip install flake8
+
+      - name: Lint with flake8
+        # lint our code
+        run: |
+          cd Source
+          flake8 &
