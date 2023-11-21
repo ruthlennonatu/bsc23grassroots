@@ -1,0 +1,28 @@
+name: Unit-Tests
+
+on:
+  Push:
+    Branches: [main, UnitTest-MatthewMcDaid]
+  pull_request:
+    branches: [main, UnitTest-MatthewMcDaid]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.12
+
+    - name: Install dependencies
+      run: |
+        cd Source
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run unit tests
+      run: |
+        cd Source
+        python manage.py test
