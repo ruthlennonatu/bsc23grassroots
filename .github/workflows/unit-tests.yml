@@ -18,11 +18,11 @@ jobs:
 
     - name: Install dependencies
       run: |
-        cd Source
+        cd ./Source
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
     - name: Run unit tests
       run: |
-        cd Source
+        cd ./Source
         python manage.py test grassroots/tests/unitTests
