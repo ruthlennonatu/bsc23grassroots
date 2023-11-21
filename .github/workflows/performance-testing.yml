@@ -1,0 +1,7 @@
+name: Performance Testing
+
+on:
+  push:
+    branches:
+      - main
+
