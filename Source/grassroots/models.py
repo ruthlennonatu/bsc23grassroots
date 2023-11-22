@@ -1,6 +1,8 @@
 from django.db import models
 
+
 class Person(models.Model):
+    """Defines a Person Class Properties and Functions"""
     userID = models.IntegerField(primary_key=True)
     username = models.CharField(max_length=255)
     password = models.CharField(max_length=255)
@@ -8,22 +10,32 @@ class Person(models.Model):
     phone = models.CharField(max_length=255)
     address = models.TextField()
 
-    def viewProfile(self):
+    def view_profile(self):
+        """Allows a Person to view their details"""
         pass
+
 
 class Customer(Person):
-    def applyForGrant(self):
+    """Defines a Customer Class Properties and Functions"""
+    def apply_for_grant(self):
+        """Creates a grant application for the Customer"""
         pass
+
 
 class Admin(Person):
-    def viewApplications(self):
+    """Admin functions to view and edit Customer grant applications"""
+    def view_applications(self):
+        """Returns all grant applications"""
         pass
 
-    def editApplication(self):
+    def edit_application(self):
+        """Edits details of the grant application"""
         pass
 
-    def viewCustomer(self):
+    def view_customer(self):
+        """Allows Admin to view a Customer"""
         pass
+
 
 class Grant(models.Model):
     grantID = models.IntegerField(primary_key=True)
@@ -31,10 +43,13 @@ class Grant(models.Model):
     grantAmount = models.FloatField()
     description = models.TextField()
 
-    def viewApplications(self):
+    def view_applications(self):
+        """View Grant application"""
         pass
 
+
 class SpecialAward(models.Model):
+    """Details of a special award"""
     awardID = models.IntegerField(primary_key=True)
     awardName = models.CharField(max_length=255)
     description = models.TextField()
@@ -42,10 +57,13 @@ class SpecialAward(models.Model):
     detail = models.TextField()
     status = models.CharField(max_length=255)
 
-    def applyForSpecial(self):
+    def apply_for_special(self):
+        """Create a special award application"""
         pass
 
+
 class Application(models.Model):
+    """Details of an application"""
     appID = models.IntegerField(primary_key=True)
     applicant = models.ForeignKey(Customer, on_delete=models.CASCADE)
     grant = models.ForeignKey(Grant, on_delete=models.CASCADE)
@@ -54,11 +72,12 @@ class Application(models.Model):
     detail = models.TextField()
     status = models.CharField(max_length=255)
 
-    def submitApplication(self):
+    def submit_application(self):
+        """Submitting an Application"""
         pass
 
-    def viewStatus(self):
+    def view_status(self):
+        """Returns the Applications status"""
         pass
 
 # Create your models here.
-
