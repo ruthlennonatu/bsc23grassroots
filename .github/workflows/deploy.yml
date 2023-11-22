@@ -2,9 +2,9 @@ name: Deploy using AWS SSM Send-Command
 
 on:
   push:
-    branches: [ "main" "Development" ]
+    branches: [ main, Development ]
   pull_request:
-    branches: [ "main" "Development" ]
+    branches: [ main, Development ]
 
 jobs:
   start:
