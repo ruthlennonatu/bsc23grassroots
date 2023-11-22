@@ -1,7 +1,7 @@
-name: DAST Scan
+name: DAST Scan using OWASP ZAP
 on:
-  push:
-    branches: ["dast-scan"]
+  schedule:
+    - cron: "30 1 * * 5"
 
 jobs:
   scan:
@@ -20,7 +20,7 @@ jobs:
           cd Source
           docker-compose up --detach
 
-      - name: OWASP ZAP
+      - name: owasp zap
         uses: zaproxy/action-baseline@v0.4.0
         with:
            target: "http://localhost:8000"
