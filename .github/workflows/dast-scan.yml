@@ -17,6 +17,7 @@ jobs:
           docker-compose build
 
       - name: launch app
+      # starts the container in the background and leaves it running
         run: |
           cd Source
           docker-compose up --detach
@@ -25,6 +26,9 @@ jobs:
         uses: zaproxy/action-baseline@v0.4.0
         with:
            target: "http://localhost:8000"
+          # continue if issues are found
            fail_action: false
+          # token not configured yet 
            token: $
+          # will create a issue "DAST Results"
            issue_title: DAST Results
