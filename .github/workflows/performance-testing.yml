@@ -1,19 +1,10 @@
 name: Performance Testing
 
 on:
-  push:
-    branches:
-      - main
-      - dev
-    paths:
-      - ".github/workflows/performance-testing.yml"
-      
-  pull_request:
-    branches:
-      - main
-      - dev
-    paths:
-      - ".github/workflows/performance-testing.yml"
+ push:
+   branches: [ main, PerformanceTesting-MarkConnolly1 ]
+ pull_request:
+   branches: [ main, PerformanceTesting-MarkConnolly1 ]
 
 jobs:
   performance-testing:
