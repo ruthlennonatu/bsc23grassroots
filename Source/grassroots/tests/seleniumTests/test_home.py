@@ -5,6 +5,7 @@ from selenium.webdriver.common.keys import Keys
 
 
 class Tests(LiveServerTestCase):
+    """Testing the Home page works on multiple browsers"""
 
     def test_chrome_home_page_title(self):
         options = webdriver.ChromeOptions()
