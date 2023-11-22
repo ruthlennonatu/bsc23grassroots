@@ -1,6 +1,6 @@
 Project documentation can be implemented using : MkDocs for building static pages, 
 mkdocstrings for auto-generating documentation from docstrings in code, 
-Material for MkDocs for styling your documentation
+Material for MkDocs for styling the documentation
 
 Docstring: Python docstrings are the string literals that appear right after the definition of a function, method, class, or module. 
 We can access these docstrings using the __doc__ attribute. Whenever string literals are present just after the definition of a 
