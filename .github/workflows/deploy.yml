@@ -2,7 +2,9 @@ name: Deploy using AWS SSM Send-Command
 
 on:
   push:
-    branches: [master]
+    branches: [ "main" "Development" ]
+  pull_request:
+    branches: [ "main" "Development" ]
 
 jobs:
   start:
@@ -19,6 +21,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
           instance-ids: ${{ secrets.INSTANCE_ID }}
-          comment: Deploy the master branch
-          working-directory: /home/ubuntu/<YOUR PROJECT DIRECTORY>
+          comment: Deploy the main branch
+          working-directory: /home/ubuntu/bsc23grassroots/Source
           command: /bin/sh ./deploy.sh

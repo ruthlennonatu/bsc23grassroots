@@ -14,6 +14,7 @@ jobs:
    steps:
    - uses: actions/checkout@v3
    - name: Install dependencies
+    # This will only run if the requirements file exists
      run: |
        cd Source
        python -m pip install --upgrade pip
