@@ -1,4 +1,4 @@
-Project documentation will be implemented using : MkDocs for building static pages, 
+Project documentation can be implemented using : MkDocs for building static pages, 
 mkdocstrings for auto-generating documentation from docstrings in code, 
 Material for MkDocs for styling your documentation
 
