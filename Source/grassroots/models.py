@@ -1,19 +1,23 @@
 from django.db import models
 
+
 class Person(models.Model):
     userID = models.IntegerField(primary_key=True)
     username = models.CharField(max_length=255)
     password = models.CharField(max_length=255)
-    name = models.CharField(max_length=255)
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
     phone = models.CharField(max_length=255)
     address = models.TextField()
 
     def viewProfile(self):
         pass
 
+
 class Customer(Person):
     def applyForGrant(self):
         pass
+
 
 class Admin(Person):
     def viewApplications(self):
@@ -25,6 +29,7 @@ class Admin(Person):
     def viewCustomer(self):
         pass
 
+
 class Grant(models.Model):
     grantID = models.IntegerField(primary_key=True)
     grantName = models.CharField(max_length=255)
@@ -33,6 +38,7 @@ class Grant(models.Model):
 
     def viewApplications(self):
         pass
+
 
 class SpecialAward(models.Model):
     awardID = models.IntegerField(primary_key=True)
@@ -44,6 +50,7 @@ class SpecialAward(models.Model):
 
     def applyForSpecial(self):
         pass
+
 
 class Application(models.Model):
     appID = models.IntegerField(primary_key=True)
