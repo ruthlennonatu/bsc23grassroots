@@ -1,5 +1,5 @@
 # Use the official Python image as the base image
-FROM python:3.9
+FROM python:3.13.0a2-slim
 
 # Set environment variables to non-interactive mode and unbuffered Python output
 ENV PYTHONUNBUFFERED 1
