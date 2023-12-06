@@ -30,5 +30,6 @@ jobs:
         #Install Locust Performance Test here
         pip install locust
 
+        #Here it verify the installation.
         pip3 install -V
     
