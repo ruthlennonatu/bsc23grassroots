@@ -5,9 +5,11 @@ on:
   push:
     branches:
       - main
+      - Develop
   pull_request:
     branches:
       - main
+      - Develop
 
 jobs:
   # only one job per workflow here it is build
