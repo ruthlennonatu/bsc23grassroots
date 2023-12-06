@@ -1,13 +1,13 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: Python application
+name: Locust Test
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "Development" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "Development" ]
 
 permissions:
   contents: read
@@ -19,16 +19,25 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python 3.10
+    - name: Set up Python 3.12
       uses: actions/setup-python@v3
       with:
-        python-version: "3.10"
+        python-version: "3.12"
     - name: Install dependencies
+      #Install locust from dependencies that's included in requirements.txt 
       run: |
         python -m pip install --upgrade pip
-        
-        #Install Locust Performance Test here
-        pip install locust
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-        pip3 install -V
-    
+    - name: Run Django Server
+    #Run server and put it the background.
+      run: | 
+        cd Source
+        python manage.py runserver &
+
+    - name: Run Locust
+      #Run locust test file to concurrent users
+      run: |
+        cd Source
+        locust -f testLocust.py
+      
