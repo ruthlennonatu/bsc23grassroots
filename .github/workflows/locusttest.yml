@@ -26,5 +26,5 @@ jobs:
 
     - name: Run & Generate Locust Test
       run: |
-        cd source
+        cd Source
         locust --headless -u 100 --run-time 60 --host http://127.0.0.1:8000/ --csv locust-stats
