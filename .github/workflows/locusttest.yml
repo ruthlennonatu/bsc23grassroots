@@ -22,9 +22,9 @@ jobs:
     - name: Run Django Server
       run: |
        cd Source
-       python manage.py runserver
+       python manage.py runserver &
 
-    - name: run & generate locust test
+    - name: Run & Generate Locust Test
       run: |
         cd source
         locust --headless -u 100 --run-time 60 --host http://127.0.0.1:8000/ --csv locust-stats
