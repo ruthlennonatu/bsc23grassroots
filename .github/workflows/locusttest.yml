@@ -18,8 +18,7 @@ jobs:
       run: |
          cd Source
          python -m pip install --upgrade pip
-         pip install --force-reinstall -U setuptools
-         pip install --force-reinstall -U pip
+         pip install charset-normalizer
          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run Django Server
       run: |
