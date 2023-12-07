@@ -18,7 +18,8 @@ jobs:
       run: |
          cd Source
          python -m pip install --upgrade pip
-         pip install --upgrade setuptools
+         pip install --force-reinstall -U setuptools
+         pip install --force-reinstall -U pip
          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run Django Server
       run: |
