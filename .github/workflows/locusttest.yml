@@ -1,0 +1,30 @@
+name: locust_test
+
+on:
+  push:
+    branches: [main, develop, locust_setup]
+
+  pull_request:
+    branches: [main, develop, locust_setup]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: install
+      # This will only run if the requirements file exists
+      run: |
+         cd Source
+         python -m pip install --upgrade pip
+         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Run Django Server
+      run: |
+       cd Source
+       python manage.py runserver
+
+    - name: run & generate locust test
+      run: |
+        cd source
+        locust --headless -u 100 --run-time 60 --host http://127.0.0.1:8000/ --csv locust-stats
