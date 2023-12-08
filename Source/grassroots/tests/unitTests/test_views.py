@@ -7,7 +7,7 @@ from django.urls import reverse
 class RegisterViewTest(TestCase):
     # specifically deals with POST request
     def test_register_view_post_request(self):
-        # arrange the data for unit test
+        # arrange the data for POST request
         data = {
             'email': 'testuser@example.com',
             'first_name': 'Test',
