@@ -1,7 +1,9 @@
 class Batman:
 
-    @staticmethod
-    def serve_justice() -> bool:
+    def __init__(self):
+        pass
+
+    def serve_justice(self) -> bool:
         bad_guy_in_jail = False
         batman_exists = True
 
