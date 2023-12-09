@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+      - Develop
+      - adding-unit-test-to-pipeline
 env:
   # Define environment variables using secrets
   DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
