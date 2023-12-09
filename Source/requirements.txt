@@ -8,3 +8,4 @@ selenium==4.14.0
 flake8==6.1.0
 coverage==7.3.2
 locust
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
