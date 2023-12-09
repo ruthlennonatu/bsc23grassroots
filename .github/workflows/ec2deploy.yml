@@ -5,10 +5,12 @@ on:
     branches:
       - main
 env:
+  # Define environment variables using secrets
   DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
   DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
   AWS_PRIVATE_KEY: ${{ secrets.AWS_PRIVATE_KEY }}
 jobs:
+  # Job to build Docker image and push to DockerHub
   build:
     runs-on: ubuntu-latest
     steps:
@@ -28,8 +30,9 @@ jobs:
           push: true
           dockerfile: ./Dockerfile
           tags: pratik180797/bsc23grassroots:tagname
+  # Job to deploy Docker image to AWS       
   deploy:
-    needs: build
+    needs: build  # This job depends on the 'build' job
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
@@ -41,15 +44,19 @@ jobs:
         password: ${{ env.DOCKERHUB_TOKEN }}
     - name: Set permissions for private key
       run: |
+        # Write AWS private key to a file and set permissions
         echo "${{ env.AWS_PRIVATE_KEY }}" > key.pem
         chmod 600 key.pem
     - name: Pull Docker image
       run: |
+        # SSH into AWS EC2 instance, pull Docker image from DockerHub
         ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@ec2-18-234-62-236.compute-1.amazonaws.com 'sudo docker pull pratik180797/bsc23grassroots:tagname'
     - name: Stop running container
       run: |
+        # Stop and remove existing Docker container on AWS EC2
         ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@ec2-18-234-62-236.compute-1.amazonaws.com 'sudo docker stop bsc23grassroots || true'
         ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@ec2-18-234-62-236.compute-1.amazonaws.com 'sudo docker rm bsc23grassroots || true'
     - name: Run new container
       run: |
+        # Run a new Docker container on AWS EC2 with the updated image
         ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@ec2-18-234-62-236.compute-1.amazonaws.com 'sudo docker run -d --name bsc23grassroots -p 8000:8000 pratik180797/bsc23grassroots:tagname'
