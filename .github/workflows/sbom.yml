@@ -2,9 +2,9 @@ name: SBOM
 
 on:
  push:
-   branches: [ "main", "Develop", "sbom-yml" ]
+   branches: [ "main", "Develop" ]
  pull_request:
-   branches: [ "main", "Develop", "sbom-yml" ]
+   branches: [ "main", "Develop" ]
 
 jobs:
  sbom:
