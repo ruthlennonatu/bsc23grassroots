@@ -5,7 +5,7 @@ on:
     branches:
       - main
       - Develop
-      - adding-unit-test-to-pipeline
+      - Automated_Pipeline
 env:
   # Define environment variables using secrets
   DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
