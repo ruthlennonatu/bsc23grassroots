@@ -68,8 +68,9 @@ To be run over <specify platform>
 3.	**Selenium** - is a suite of tools and libraries for automating web browsers, commonly used for testing web applications. Its core component, WebDriver, allows developers to script interactions with browsers in various programming languages.
 4.	**Docker** – is a tool that lets you package and run applications with all their parts in a neat, portable box called a container, making it easy to deploy and run consistently across different places. Doing it because during automated workflow
 5.	**Snyk** - is a security platform that helps developers find and fix vulnerabilities in their open-source dependencies. It integrates into the development workflow, providing real-time feedback and automated remediation to improve the overall security of software applications.
-6.	**Unit testing** - is the practice of testing individual parts of a software program to ensure they work correctly in isolation. It helps catch and fix errors early in the development process.
-7.	**Performance testing** - assesses how well a system functions under different conditions, helping ensure it meets speed, responsiveness, and scalability requirements.
+6.	**OWASP ZAP** - is an open-source DAST tool that integrates into the development workflow, scans a target URL for vulnerabilities and maintains an issue in GitHub repository for the identified alerts.
+7.	**Unit testing** - is the practice of testing individual parts of a software program to ensure they work correctly in isolation. It helps catch and fix errors early in the development process.
+8.	**Performance testing** - assesses how well a system functions under different conditions, helping ensure it meets speed, responsiveness, and scalability requirements.
 
 # Frameworks
 We will be using Django and SQLite
