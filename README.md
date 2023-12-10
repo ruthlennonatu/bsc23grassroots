@@ -9,28 +9,34 @@
 ![Synk Security](https://github.com/ruthlennonatu/bsc23grassroots/actions/workflows/locusttest.yml/badge.svg?event=push)
 ---
 
-# BScDevOps Assign - Team
+BScDevOps Assign - Team 2
 
 # Table of Contents
-- Preamble
-- Product Owner
-- Product Development Team
-- Project Deadline
-- Project Specification
-- Useful Links
-- More Information
-- Risk Register
-- Tenants of Design
-- Social Contract
-- Meetings
-- Communication
-- Other
-- Branching Strategy 
-- Estimating Story Points 
-- Definition of Ready 
-- Definition of Done 
-- Preamble
-  
+- [Preamble](#preamble)
+- [Scrum Master](#scrum-master)
+- [Product Owner](#product-owner)
+- [Product Development Team](#product-development-team)
+- [Project Deadline](#project-deadline)
+- [Project Specification](#project-specification)
+- [Tools and Services used](#tools-and-services-used)
+- [Frameworks](#frameworks)
+- [Useful Links](#useful-links)
+- [Section Description](#sectiondescription)
+- [Risk Register](#risk-register)
+- [Tenants of Design](#tenants-of-design)
+- [Security](#security)
+- [Testing](#testing)
+- [Environments](#environments)
+- [GitHub Version Control](#github-version-control)
+- [Agile project management methods/principles (jira)](#agile-project-management-methodsprinciples-jira)
+- [Social Contract](#social-contract)
+- [Meetings](#meetings)
+- [Communication](#communication)
+- [Aglie way of working](#agile-way-of-working)
+- [Estimating Story Points](#estimating-story-points)
+- [Definition of Ready](#definition-of-ready)
+
+# Preamble
 This is the online repository for the DevOps Assignment.
 
 Our product will be delivered using an Agile methodology that embraces the DevOps culture. Please note that our culture embraces change and these documents are treated as living, breathing artefacts that will be continuously updated.
@@ -90,31 +96,19 @@ IDE will be Pycharm 2023 Community Edition
  - GitHub: https://github.com/ruthlennonatu/
  - Repository Link: https://github.com/ruthlennonatu/bsc23grassroots.git
 
-# More Information
-For more information visit our other sections
 
 # Section	Description
-Process	- Describes the companies process
-
-Project Log	- Log of project activities
-
-Costings - Overview of the project cost
-
-Architecture - Outlines the architecture
-
-Environments - Overview of the environment set-up
-
-DR Plan	- Disaster Recovery Plan and procedures
-
-Requirements - Overview of the requirements for the project
-
-SLAs - Service level agreements
-
-Risk Management	- How we manage risk
-
-Security - Overview of security
-
-Project Log	- Team log for the project
+- Process	- Describes the companies process
+- Project Log	- Log of project activities
+- Costings - Overview of the project cost
+- Architecture - Outlines the architecture
+- Environments - Overview of the environment set-up
+- DR Plan	- Disaster Recovery Plan and procedures
+- Requirements - Overview of the requirements for the project
+- SLAs - Service level agreements
+- Risk Management	- How we manage risk
+- Security - Overview of security
+- Project Log	- Team log for the project
 
 # Risk Register
 These are the current Risks on the project, re-aligned on a weekly basis
