@@ -31,4 +31,4 @@ jobs:
       # Run the test with no GUI and 100 users for 60 seconds then produce a csv report
       run: |
         cd Source
-        locust --headless -u 100 --run-time 60 --host http://127.0.0.1:8000/ --csv locust-stats
+        locust --headless -u 100 --run-time 60 --host http://127.0.0.1:8000/ --csv locust
