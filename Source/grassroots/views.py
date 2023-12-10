@@ -1,13 +1,17 @@
 from django.shortcuts import render, redirect
-from .forms import PersonForm
+from django.contrib.auth import login
+from .forms import UserRegistrationForm
 
 
-def create_person(request):
+def register(request):
     if request.method == 'POST':
-        form = PersonForm(request.POST)
+        form = UserRegistrationForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect()  # todo create a view for when the form is saved
+            user = form.save()
+            login(request, user)  # Automatically log the user in after registration
+            # Redirect to a success page.
+            return redirect(
+                'home')  # Replace 'index' with the name of the view that should be displayed on successful registration
     else:
-        form = PersonForm()
-    return render(request, 'Source/grassroots/templates/form.html', {'form': form})
+        form = UserRegistrationForm()
+    return render(request, 'register.html', {'form': form})
