@@ -29,7 +29,9 @@ jobs:
    # - name: Run tests
    #   run: poetry run pytest
     - name: Test dependencies with Snyk
-      run: snyk test
+      run: |
+        pip install -r Source/requirements.txt
+        snyk test --all-projects
       env:
         SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
     - name: Monitor dependencies for security issues with Snyk
