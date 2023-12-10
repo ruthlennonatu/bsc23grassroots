@@ -1,14 +1,14 @@
-name: locust_test
+name: Locust Test
 
 on:
   push:
-    branches: [main, develop, locust_setup]
+    branches: [ "main", "Develop", "locust_setup"]
 
   pull_request:
-    branches: [main, develop, locust_setup]
+    branches: [ "main", "Develop", "locust_setup"]
 
 jobs:
-  build:
+  locust:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,12 +20,15 @@ jobs:
          python -m pip install --upgrade pip
          pip install charset-normalizer
          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
     - name: Run Django Server
+      # Build the Django Sever to run tests on
       run: |
        cd Source
        python manage.py runserver &
 
     - name: Run & Generate Locust Test
+      # Run the test with no GUI and 100 users for 60 seconds then produce a csv report
       run: |
         cd Source
         locust --headless -u 100 --run-time 60 --host http://127.0.0.1:8000/ --csv locust-stats
