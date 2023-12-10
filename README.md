@@ -6,7 +6,7 @@
 ![Unit Tests](https://github.com/ruthlennonatu/bsc23grassroots/actions/workflows/unit-tests.yml/badge.svg?event=push)
 ![OWASP Zap](https://github.com/ruthlennonatu/bsc23grassroots/actions/workflows/dast-scan.yml/badge.svg?event=push)
 ![Synk Security](https://github.com/ruthlennonatu/bsc23grassroots/actions/workflows/snyk-security.yml/badge.svg?event=push)
-![Synk Security](https://github.com/ruthlennonatu/bsc23grassroots/actions/workflows/locusttest.yml/badge.svg?event=push)
+![Synk Security](https://github.com/ruthlennonatu/bsc23grassroots/actions/workflows/locust-test.yml/badge.svg?event=push)
 ---
 
 BScDevOps Assign - Team 2
