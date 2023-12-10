@@ -1,7 +1,11 @@
 name: Test dependencies for security issues with Snyk
 
 on: 
-  push
+  push:
+   branches:
+      - main
+      - Develop
+      - Automated_Pipeline
 
 env:
   CARGO_TERM_COLOR: always
