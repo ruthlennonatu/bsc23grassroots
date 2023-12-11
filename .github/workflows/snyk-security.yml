@@ -14,30 +14,39 @@ jobs:
   dependencies-check:
     runs-on: ubuntu-latest
     steps:
+     # Checkout the repository
     - uses: actions/checkout@v2
+    # Set up Python
     - uses: actions/setup-python@v2
       with:
         python-version: 3.9
+     # Install Poetry   
     - name: Install Poetry
       run: |
         curl -sSL https://github.com/python-poetry/install.python-poetry.org/raw/main/install-poetry.py > install-poetry.py
         python install-poetry.py
+     # Display environment information   
     - name: Show environment
       run: | 
         python --version
         pip --version
         poetry --version
+    # Set up Snyk for security checks    
     - uses: snyk/actions/setup@master
+    # Install Python dependencies with Poetry
     - name: Install Python dependencies with Poetry
       run: poetry install -v
    # - name: Run tests
    #   run: poetry run pytest
+
+   # Test dependencies with Snyk
     - name: Test dependencies with Snyk
       run: |
         pip install -r Source/requirements.txt
         snyk test --all-projects
       env:
         SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
+     # Monitor dependencies for security issues with Snyk    
     - name: Monitor dependencies for security issues with Snyk
       run: snyk monitor
       env:
