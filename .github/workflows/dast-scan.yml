@@ -29,6 +29,6 @@ jobs:
           # continue if issues are found
            fail_action: false
           # token not configured yet 
-           token: $
+           DAST_TOKEN: ${{secrets.DAST_TOKEN}}
           # will create a issue "DAST Results"
            issue_title: DAST Results
