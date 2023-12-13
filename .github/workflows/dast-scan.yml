@@ -1,7 +1,10 @@
 name: DAST Scan using OWASP ZAP
 on:
   push:
-      branches: [ update-dast-scan ]
+      branches: [ "main" , "Develop" , "update-dast-scan" ]
+  pull_request:
+      branches: [ "main" , "Develop" , "update-dast-scan" ]
+  
   #schedule:
   # scans on every friday at 1.30 am
     #- cron: "30 1 * * 5"
@@ -30,7 +33,7 @@ jobs:
            target: "http://localhost:8000"
           # continue if issues are found
            fail_action: false
-          # token not configured yet 
+          # token 
            DAST_TOKEN: ${{secrets.DAST_TOKEN}}
-          # will create a issue "DAST Results"
+          # create a issue "DAST Results"
            issue_title: DAST Results
