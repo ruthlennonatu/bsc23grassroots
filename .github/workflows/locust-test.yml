@@ -1,18 +1,26 @@
 name: Locust Test
 
 on:
-  push:
-    branches: [ "main", "Develop", "locust_setup"]
+  # Runs every Thursday at 1:30am
+  schedule:
+    - cron: '30 1 * * 4'
 
-  pull_request:
-    branches: [ "main", "Develop", "locust_setup"]
+  # Allow for manual running
+  workflow_dispatch:
 
 jobs:
   locust:
     runs-on: ubuntu-latest
+    permissions:
+      # This will write anything new or changed files to the repo
+      contents: write
 
     steps:
-    - uses: actions/checkout@v3
+    -  uses: actions/checkout@v4
+       with:
+         # Use the current branch workflow is running on
+         ref: ${{ github.head_ref }}
+
     - name: install
       # This will only run if the requirements file exists
       run: |
@@ -22,7 +30,7 @@ jobs:
          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
     - name: Run Django Server
-      # Build the Django Sever to run tests on
+      # Build the Django Sever to run performance tests on
       run: |
        cd Source
        python manage.py runserver &
@@ -32,3 +40,9 @@ jobs:
       run: |
         cd Source
         locust --headless -u 100 --run-time 60 --host http://127.0.0.1:8000/ --csv locust
+
+    - uses: stefanzweifel/git-auto-commit-action@v5
+      # Commit all changed files to the repository
+      with:
+        # Message displayed on commit
+        commit_message: Locust Reports
