@@ -2,10 +2,10 @@ name: Locust Test
 
 on:
   push:
-    branches: [ "main", "Develop", "locust_setup"]
+    branches: [ "main", "Develop", "Saving-locust-reports"]
 
   pull_request:
-    branches: [ "main", "Develop", "locust_setup"]
+    branches: [ "main", "Develop", "Saving-locust-reports"]
 
 jobs:
   locust:
