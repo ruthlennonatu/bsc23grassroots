@@ -42,6 +42,7 @@ jobs:
    # Test dependencies with Snyk
     - name: Test dependencies with Snyk
       run: |
+        pip install --upgrade pip
         pip install -r Source/requirements.txt
         snyk test --all-projects
       env:
