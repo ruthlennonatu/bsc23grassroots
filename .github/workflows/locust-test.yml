@@ -43,3 +43,5 @@ jobs:
       # Other steps that change files in the repository
       # Commit all changed files back to the repository
     - uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: Locust Reports
