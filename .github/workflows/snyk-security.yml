@@ -1,4 +1,4 @@
-name: Test dependencies for security issues with Snyk
+name: Test dependencies for security issues with Snyk 
 
 on: 
   push:
