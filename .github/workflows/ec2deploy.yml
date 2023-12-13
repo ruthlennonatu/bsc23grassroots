@@ -48,7 +48,7 @@ jobs:
     # Write AWS private key to a file and set permissions
       run: |
         echo "${{ env.AWS_PRIVATE_KEY }}" > key.pem
-        chmod 400 key.pem
+        chmod 600 key.pem
     - name: Pull Docker image
     # SSH into AWS EC2 instance, pull Docker image from DockerHub
       run: |
