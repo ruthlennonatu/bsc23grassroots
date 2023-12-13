@@ -1,8 +1,10 @@
 name: DAST Scan using OWASP ZAP
 on:
-  schedule:
+  push:
+      branches: [ update-dast-scan ]
+  #schedule:
   # scans on every friday at 1.30 am
-    - cron: "30 1 * * 5"
+    #- cron: "30 1 * * 5"
 
 jobs:
   scan:
