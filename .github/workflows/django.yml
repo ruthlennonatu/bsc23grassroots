@@ -26,6 +26,7 @@ jobs:
       # This will install all of the dependencies from requirments.txt
       run: |
        cd Source
+       pip install django
        python -m pip install --upgrade pip
        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
