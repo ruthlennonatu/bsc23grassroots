@@ -36,8 +36,8 @@ jobs:
     # Install Python dependencies with Poetry
     - name: Install Python dependencies with Poetry
       run: poetry install -v
-   # - name: Run tests
-   #   run: poetry run pytest
+    - name: Run tests
+      run: poetry run pytest
 
    # Test dependencies with Snyk
     - name: Test dependencies with Snyk
