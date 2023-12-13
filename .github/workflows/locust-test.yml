@@ -42,9 +42,11 @@ jobs:
         if [-z "$(git status --porcelain)"]; then
            echo "::set-output name=push::false"
         else
+           git pull origin ${{ github.head_ref }}
            git commit -m "Add changes" -a
            echo "::set-output name=push::true"
         fi
+
       shell: bash
     - name: Push changes
       if: steps.commit.outputs.push == 'true'
