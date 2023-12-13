@@ -34,6 +34,6 @@ jobs:
           # continue if issues are found
            fail_action: false
           # token 
-           DAST_TOKEN: ${{secrets.DAST_TOKEN}}
+           token: ${{secrets.DAST_TOKEN}}
           # create a issue "DAST Results"
            issue_title: DAST Results
