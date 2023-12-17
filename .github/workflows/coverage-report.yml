@@ -15,7 +15,7 @@ jobs:
   # only one job per workflow here it is build
   build:
     # runs on ubuntu virtual machine
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v3
