@@ -21,4 +21,9 @@ class TestAstronaut(TestCase):
         astronaut = Astronaut()
         self.assertTrue(astronaut.launch_mission())
 
+    def test_send_message_to_earth(self):
+        astronaut = Astronaut()
+        response = astronaut.send_message_to_earth()
+        self.assertEqual(response, "Message from space: All systems go!")
+
 
