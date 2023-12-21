@@ -29,7 +29,28 @@ ALLOWED_HOSTS = ['ec2-18-234-62-236.compute-1.amazonaws.com', 'localhost', '127.
 
 
 # Application definition
+"""
+Django Installed Apps Configuration
 
+This list defines the installed applications for a Django project. Installed applications are reusable modules that provide specific functionalities to the Django project.
+
+By default, Django includes several built-in applications that handle common tasks such as authentication, administration, and serving static files. Additionally, custom applications can be included to extend the project's functionality.
+
+Usage:
+- Add or remove application names within this list to configure the Django project's installed applications.
+- Each application name is a string representing a Python module path.
+
+Example:
+    INSTALLED_APPS = [
+        'django.contrib.admin',             # Admin interface for managing models
+        'django.contrib.auth',              # Authentication framework
+        'django.contrib.contenttypes',      # Content types framework
+        'django.contrib.sessions',          # Session framework
+        'django.contrib.messages',          # Messaging framework
+        'django.contrib.staticfiles',       # Static file handling
+        'grassroots.apps.GrassrootsConfig', # Custom application from the 'grassroots' module
+    ]
+"""
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,6 +61,27 @@ INSTALLED_APPS = [
     'grassroots.apps.GrassrootsConfig',
 ]
 
+"""
+Django Middleware Configuration
+
+This list defines the middleware classes for a Django project. Middleware is a way to process requests and responses globally before they reach the view or after they leave the view. Each middleware class provides specific functionality.
+
+Usage:
+- Add or remove middleware classes within this list to customize request and response processing.
+- The order of middleware classes is important, as they are applied sequentially.
+
+Example:
+    MIDDLEWARE = [
+        'django.middleware.security.SecurityMiddleware',           # Adds security headers
+        'django.contrib.sessions.middleware.SessionMiddleware',    # Manages sessions
+        'django.middleware.common.CommonMiddleware',               # Various common operations
+        'django.middleware.csrf.CsrfViewMiddleware',               # Adds CSRF protection
+        'django.contrib.auth.middleware.AuthenticationMiddleware', # Handles user authentication
+        'django.contrib.messages.middleware.MessageMiddleware',     # Manages messages
+        'django.middleware.clickjacking.XFrameOptionsMiddleware',  # Prevents clickjacking attacks
+    ]
+"""
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -49,6 +91,46 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+"""
+Django URL Configuration and Template Settings
+
+This configuration block sets the root URLconf and configures the template engine for a Django project.
+
+URL Configuration:
+- 'ROOT_URLCONF' specifies the Python module path for the project's root URL configuration.
+
+Template Configuration:
+- 'TEMPLATES' is a list of dictionaries, where each dictionary represents a configuration for the Django template engine.
+- 'BACKEND': Specifies the template engine backend.
+- 'DIRS': Sets the directory where project-specific templates are located.
+- 'APP_DIRS': Enables template loading from installed applications.
+- 'OPTIONS': Additional configuration options for the template engine.
+  - 'context_processors': Defines a list of context processors that add variables to the template context.
+
+Usage:
+- Adjust 'ROOT_URLCONF' to point to the desired URL configuration.
+- Modify 'TEMPLATES' to customize the template engine settings based on project requirements.
+
+Example:
+    ROOT_URLCONF = 'bsc23grassroots.urls'
+
+    TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [BASE_DIR / 'templates'],
+            'APP_DIRS': True,
+            'OPTIONS': {
+                'context_processors': [
+                    'django.template.context_processors.debug',
+                    'django.template.context_processors.request',
+                    'django.contrib.auth.context_processors.auth',
+                    'django.contrib.messages.context_processors.messages',
+                ],
+            },
+        },
+    ]
+"""
 
 ROOT_URLCONF = 'bsc23grassroots.urls'
 
@@ -86,6 +168,33 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
+"""
+Django Authentication Password Validators Configuration
+
+This configuration block sets up password validation requirements for user authentication in a Django project.
+
+Password Validators:
+- 'AUTH_PASSWORD_VALIDATORS' is a list of dictionaries, each representing a password validation requirement.
+- 'NAME': Specifies the fully qualified name of the validator to use.
+
+Available Validators:
+1. 'UserAttributeSimilarityValidator': Ensures that the password is not too similar to the user's attributes.
+2. 'MinimumLengthValidator': Enforces a minimum length for the password.
+3. 'CommonPasswordValidator': Checks whether the password is common and easily guessable.
+4. 'NumericPasswordValidator': Requires at least one numeric character in the password.
+
+Usage:
+- Modify 'AUTH_PASSWORD_VALIDATORS' to customize password validation requirements.
+- Enable or disable validators based on project security needs.
+
+Example:
+    AUTH_PASSWORD_VALIDATORS = [
+        {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
+        {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
+        {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
+        {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
+    ]
+"""
 
 AUTH_PASSWORD_VALIDATORS = [
     {

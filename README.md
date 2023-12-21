@@ -70,7 +70,7 @@ To be run over <specify platform>
 5.	**Snyk** - is a security platform that helps developers find and fix vulnerabilities in their open-source dependencies. It integrates into the development workflow, providing real-time feedback and automated remediation to improve the overall security of software applications.
 6.	**OWASP ZAP** - is an open-source DAST tool that integrates into the development workflow, scans a target URL for vulnerabilities and maintains an issue in GitHub repository for the identified alerts.
 7.	**Unit testing** - is the practice of testing individual parts of a software program to ensure they work correctly in isolation. It helps catch and fix errors early in the development process.
-8.	**Performance testing** - assesses how well a system functions under different conditions, helping ensure it meets speed, responsiveness, and scalability requirements.
+8.	**Performance testing** - assesses how well a system functions under different conditions, helping ensure it meets speed, responsiveness, and scalability requirements. Locust is the tool that we will be using for this.
 
 # Frameworks
 We will be using Django and SQLite
