@@ -1,34 +1,42 @@
 name: DAST Scan using OWASP ZAP
 on:
-  schedule:
+  push:
+      branches: [ "main" , "Develop" , "update-dast-scan" ]
+  pull_request:
+      branches: [ "main" , "Develop" , "update-dast-scan" ]
+  
+  #schedule:
   # scans on every friday at 1.30 am
-    - cron: "30 1 * * 5"
+    #- cron: "30 1 * * 5"
 
 jobs:
   scan:
     runs-on: ubuntu-latest
     
     steps:
+      # check code repo
       - uses: actions/checkout@v3
-
+      
+      # create docker container
       - name: build docker image
         run: |
           cd Source
           docker-compose build
-
+          
+      # start container in the background
       - name: launch app
-      # starts the container in the background and leaves it running
         run: |
           cd Source
           docker-compose up --detach
 
+      # use owasp zap tool
       - name: owasp zap
         uses: zaproxy/action-baseline@v0.4.0
         with:
            target: "http://localhost:8000"
           # continue if issues are found
            fail_action: false
-          # token not configured yet 
-           token: $
-          # will create a issue "DAST Results"
+          # configure token 
+           token: ${{secrets.DAST_TOKEN}}
+          # create an issue "DAST Results"
            issue_title: DAST Results
