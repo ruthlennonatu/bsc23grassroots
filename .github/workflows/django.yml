@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     strategy:
       max-parallel: 4
       matrix:
@@ -27,7 +27,7 @@ jobs:
       run: |
        cd Source
        python -m pip install --upgrade pip
-       if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+       pip install -r requirements.txt
     
     - name: Run Django Server
       # Building and running the Django server to ensure it will compile and run

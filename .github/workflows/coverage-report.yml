@@ -15,12 +15,12 @@ jobs:
   # only one job per workflow here it is build
   build:
     # runs on ubuntu virtual machine
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set up python 3.12
+      - name: Set up python 3.12.x
         uses: actions/setup-python@v3
         with:
           # python version is 3.12
@@ -31,7 +31,7 @@ jobs:
         run: |
           cd Source
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install -r requirements.txt
 
       - name: Coverage report
         # coverage measurement of tests
